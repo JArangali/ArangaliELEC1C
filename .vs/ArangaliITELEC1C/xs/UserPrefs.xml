@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{4B1CE145-EF0E-4635-9110-64C925969BC4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ArangaliITELEC1C/Views/Instructor/Index.cshtml">
+    <Files>
+      <File FileName="ArangaliITELEC1C/Views/Student/Index.cshtml" Line="11" Column="8" />
+      <File FileName="ArangaliITELEC1C/Controllers/StudentController.cs" Line="4" Column="1" />
+      <File FileName="ArangaliITELEC1C/Models/ErrorViewModel (copy).cs" Line="14" Column="19" />
+      <File FileName="ArangaliITELEC1C/Views/Instructor/Index.cshtml" Line="9" Column="7" />
+      <File FileName="ArangaliITELEC1C/Controllers/InstructorController.cs" Line="15" Column="23" />
+      <File FileName="ArangaliITELEC1C/Views/Shared/_Layout.cshtml" Line="32" Column="128" />
+      <File FileName="ArangaliITELEC1C/Models/Instructor.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ArangaliITELEC1C" expanded="True">
+            <Node name="ArangaliITELEC1C" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Instructor" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+                <Node name="Student" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ArangaliITELEC1C PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
