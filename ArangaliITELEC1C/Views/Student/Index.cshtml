@@ -4,45 +4,37 @@
 @{
 }
 
-<h1>
-    Student List
-</h1>
-
-<table>
+<table class="table table-dark">
     <tr>
-        <td>
-            Name: 
-        </td>
-        <td>
-            @ViewBag.student.StudentName
-        </td>
+        <h1>Student List</h1>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Admission Date</th>
+        <th>Email</th>
+        <th>GPA</th>
+        <th>Details</th>
+        <th>Update</th>
+        <th>Delete</th>
+
     </tr>
 
-    <tr>
-        <td>
-            Date Enrolled: 
-        </td>
-        <td>
-            @ViewBag.student.DateEnrolled
-        </td>
-    </tr>
 
-    <tr>
-        <td>
-            Course: 
-        </td>
-        <td>
-            @ViewBag.student.Course
-        </td>
-    </tr>
 
-    <tr>
-        <td>
-            Email:
-        </td>
-        <td>
-            @ViewBag.student.Email
-        </td>
-    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.StudentLastName, @student.StudentFirstName</td>
+            <td>@student.Course</td>
+            <td>@student.AdmissionDate</td>
+            <td>@student.Email</td>
+            <td>@student.GPA</td>
+            <td><a asp-action="ShowDetail" asp-route-id="@student.StudentId" class="btn btn-primary">Show Details</a></td>
+            <td><a asp-action="UpdateStudent" asp-route-id="@student.StudentId" class="btn btn-primary">Update</a></td>
+            <td><a asp-action="Delete" asp-route-id="@student.StudentId" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
 
-</table>
+</table><br />
+        <a asp-action="AddStudent" class="btn btn-primary">Add Student</a>
