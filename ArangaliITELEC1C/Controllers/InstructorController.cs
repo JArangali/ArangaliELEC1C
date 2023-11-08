@@ -38,8 +38,11 @@ namespace ArangaliITELEC1C.Controllers;
     [HttpPost]
     public IActionResult AddInstructor(Instructor newInstructor)
     {
-        _dummyData.InstructorList.Add(newInstructor);
-        return RedirectToAction("Index");
+        if (!ModelState.IsValid)
+            return View();
+
+            _dummyData.InstructorList.Add(newInstructor);
+            return View("Index", _dummyData.InstructorList);
     }
 
     [HttpGet]

@@ -1,33 +1,34 @@
 ﻿@model Student;
 
+<div asp-validation-summary="All" class="text-danger"></div>
 <form asp-action="AddStudent" asp-controller="Student" method="post">
     <div class="form-group">
-        <label asp-for="StudentFirstName">First Name</label>
+        <label asp-for="StudentFirstName"></label>
         <input asp-for="StudentFirstName" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="StudentLastName">Last Name</label>
+        <label asp-for="StudentLastName"></label>
         <input asp-for="StudentLastName" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="GPA">GPA</label>
+        <label asp-for="GPA"></label>
         <input asp-for="GPA" class="form-control" />
     </div>
 
     <div class="form-group">
-        <label asp-for="Course">Course</label>
+        <label asp-for="Course"></label>
         <select asp-for="Course" asp-items="@Html.GetEnumSelectList(typeof(Course))" class=" form-control"></select>
     </div>
 
     <div class="form-group">
-        <label asp-for="AdmissionDate">AdmussionDate</label>
+        <label asp-for="AdmissionDate"></label>
         <input asp-for="AdmissionDate" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="Email">Email</label>
+        <label asp-for="Email"></label>
         <input asp-for="Email" class="form-control"></>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

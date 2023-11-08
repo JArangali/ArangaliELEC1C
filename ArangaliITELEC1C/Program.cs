@@ -1,16 +1,16 @@
 ﻿using ArangaliITELEC1C.Services;
-using ArangaliITELEC1C.Data;
-using Microsoft.EntityFrameworkCore;
+//using ArangaliITELEC1C.Data;
+//using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//builder.Services.AddSingleton<IMyFakeDataService, MyFakeDataService>();//Dummy Data Service
+builder.Services.AddSingleton<IMyFakeDataService, MyFakeDataService>();//Dummy Data Service
 
 //Register Db Context
-builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
-    );
+//builder.Services.AddDbContext<AppDbContext>(
+//    options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
+//    );
 
 
 var app = builder.Build();
@@ -22,9 +22,9 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStaticFiles();
 
-//Ensure Database is Created
-var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DbContext>();
-context.Database.EnsureCreated();
+////Ensure Database is Created
+//var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DbContext>();
+//context.Database.EnsureCreated();
 
 app.UseRouting();
 
